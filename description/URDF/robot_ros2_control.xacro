@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="caramelo">
+
+    <ros2_control name="RobotSystem" type="system">
+
+        <!-- Plugin do ROS 2 Control compatível com Gazebo -->
+        <!-- ROS 2 Humble usa ign_ros2_control -->
+        <xacro:if value="$(arg is_ignition)">
+            <hardware>
+                <plugin>ign_ros2_control/IgnitionSystem</plugin>
+            </hardware>
+        </xacro:if>
+
+        <!-- ROS 2 Iron ou superior usa gz_ros2_control -->
+        <xacro:unless value="$(arg is_ignition)">
+            <hardware>
+                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            </hardware>
+        </xacro:unless>
+
+        <!-- Definição dos joints com interfaces -->
+        <joint name="fl_wheel_joint">
+            <command_interface name="velocity" />
+            <state_interface name="velocity" />
+            <state_interface name="position" />
+        </joint>
+        <joint name="fr_wheel_joint">
+            <command_interface name="velocity" />
+            <state_interface name="velocity" />
+            <state_interface name="position" />
+        </joint>
+        <joint name="rl_wheel_joint">
+            <command_interface name="velocity" />
+            <state_interface name="velocity" />
+            <state_interface name="position" />
+        </joint>
+        <joint name="rr_wheel_joint">
+            <command_interface name="velocity" />
+            <state_interface name="velocity" />
+            <state_interface name="position" />
+        </joint>
+
+    </ros2_control>
+
+</robot>

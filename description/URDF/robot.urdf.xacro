@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot name="caramelo" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:arg name="is_ignition" default="true"/>
+
+  <xacro:include filename="robot_core.xacro" />
+  <xacro:include filename="robot_gazebo.xacro" />
+  <xacro:include filename="robot_ros2_control.xacro" />
+  <xacro:include filename="inertial_macros.xacro" />
+
+</robot>
