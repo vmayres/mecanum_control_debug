@@ -12,23 +12,18 @@ def generate_launch_description():
             "--controller-manager",
             "/controller_manager",
         ],
-        output="screen",
-        parameters=[{"use_sim_time": True}]
+        output="screen"
     )
 
     mecanum_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=[
-            "mecanum_drive_controller",  # Ensure this matches the controller name
+            "mecanum_controller",
             "--controller-manager",
-            "/controller_manager",
-            "--ros-args",
-            "--params-file",
-            "/home/victor/Caramelo_workspace/src/caramelo_controller/config/robot_controllers.yaml"
+            "/controller_manager"
         ],
-        output="screen",
-        parameters=[{"use_sim_time": True}]
+        output="screen"
     )
 
     return LaunchDescription([

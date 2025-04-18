@@ -18,26 +18,25 @@
             </hardware>
         </xacro:unless>
 
-        <!-- Definição dos joints com interfaces -->
+        <!-- Declaração dos joints com interface de velocidade -->
         <joint name="fl_wheel_joint">
             <command_interface name="velocity" />
             <state_interface name="velocity" />
-            <state_interface name="position" />
         </joint>
+
         <joint name="fr_wheel_joint">
             <command_interface name="velocity" />
             <state_interface name="velocity" />
-            <state_interface name="position" />
         </joint>
+
         <joint name="rl_wheel_joint">
             <command_interface name="velocity" />
             <state_interface name="velocity" />
-            <state_interface name="position" />
         </joint>
+
         <joint name="rr_wheel_joint">
             <command_interface name="velocity" />
             <state_interface name="velocity" />
-            <state_interface name="position" />
         </joint>
 
     </ros2_control>

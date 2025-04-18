@@ -92,10 +92,6 @@
 
     <gazebo reference="front_left_wheel">
         <material>Gazebo\Blue</material>
-        <mecanum_drive>
-            <roller_count>6</roller_count>
-            <roller_angle>45</roller_angle>
-        </mecanum_drive>
     </gazebo>
 
     <!--! FRONT RIGHT WHEEL -->
@@ -127,10 +123,6 @@
 
     <gazebo reference="front_right_wheel">
         <material>Gazebo\Blue</material>
-        <mecanum_drive>
-            <roller_count>6</roller_count>
-            <roller_angle>45</roller_angle>
-        </mecanum_drive>
     </gazebo>
 
     <!--! REAR LEFT WHEEL -->
@@ -162,10 +154,6 @@
 
     <gazebo reference="rear_left_wheel">
         <material>Gazebo\Blue</material>
-        <mecanum_drive>
-            <roller_count>6</roller_count>
-            <roller_angle>45</roller_angle>
-        </mecanum_drive>
     </gazebo>
 
     <!--! REAR RIGHT WHEEL -->
@@ -197,10 +185,6 @@
 
     <gazebo reference="rear_right_wheel">
         <material>Gazebo\Blue</material>
-        <mecanum_drive>
-            <roller_count>6</roller_count>
-            <roller_angle>45</roller_angle>
-        </mecanum_drive>
     </gazebo>
 
 </robot>
